@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký thông tin người dùng</title>
+    <link rel="stylesheet" href="TH.css">
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <img src="anh-thong-tin-tuyen-dung_012646189.jpg" alt="">
+        </header>
+        <main>
+            <form id="registrationForm" onsubmit="return validateForm()">
+                <h2>Đăng ký thông tin người dùng</h2>
+                <div>
+                    <label for="fullName">Họ và tên:</label>
+                    <input type="text" id="fullName" required maxlength="50">
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div>
+                    <label for="phone">Phone:</label>
+                    <input type="text" id="phone" required>
+                </div>
+                <div>
+                    <label>Giới tính:</label>
+                    <input type="radio" name="gender" value="male" required> Nam
+                    <input type="radio" name="gender" value="female" required> Nữ
+                </div>
+                <div>
+                    <label>Sở thích:</label>
+                    <input type="checkbox" name="hobbies" value="Thể thao"> Thể thao
+                    <input type="checkbox" name="hobbies" value="Phim ảnh"> Phim ảnh
+                    <input type="checkbox" name="hobbies" value="Đọc sách"> Đọc sách
+                    <input type="checkbox" name="hobbies" value="Âm nhạc"> Âm nhạc
+                    <input type="checkbox" name="hobbies" value="Khác"> Khác
+                </div>
+                <div>
+                    <label for="intro">Giới thiệu bản thân:</label>
+                    <textarea id="intro" rows="4"></textarea>
+                </div>
+                <button type="submit">Đăng ký</button>
+            </form>
+            <div id="userInfo" class="hidden">
+                <h2>Thông tin người dùng</h2>
+                <p id="fullNameDisplay"></p>
+                <p id="emailDisplay"></p>
+                <p id="phoneDisplay"></p>
+                <p id="genderDisplay"></p>
+                <p id="hobbiesDisplay"></p>
+                <p id="introDisplay"></p>
+            </div>
+        </main>
+        <footer>
+            <p>Liên hệ:EJC GROUP</p>
+            <p>Email: xuanlucplhn96@gmail.com</p>
+        </footer>
+    </div>
+
+    <script src="TH.js"></script>
+</body>
+</html>
